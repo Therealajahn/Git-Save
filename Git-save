@@ -1,0 +1,34 @@
+#!/usr/bin/expect
+
+set timeout 10
+
+# Get the first line of key.txt and set to variable 'key'
+set file [open "~/Documents/key.txt" r]
+set key [gets $file]
+
+spawn git add -A
+
+# Get user input and store as 'message' 
+puts "\nCommit message: "
+gets stdin message
+
+# Execute git commit with message
+spawn git commit -m "$message"
+
+# Get user input and store as 'branch'
+puts "\nBranch: "
+gets stdin branch 
+
+# Execute git push with branch input
+spawn git push origin $branch
+puts "\n"
+# Input answers to username and password queuries
+expect "Username for 'https://github.com': " 
+send "Therealajahn\n"
+
+expect "Password for 'https://Therealajahn@github.com': "
+send "$key\n"
+
+expect eof
+
+                                        
