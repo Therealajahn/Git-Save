@@ -20,7 +20,7 @@ This repository contains an automation script written in Expect that streamlines
 
 * Automatic push with stored credentials for convenience.
 
-* Credential management: pulls your GitHub password/token from ~/Documents/key.txt.
+* Credential management: pulls your GitHub password/token from > ~/Documents/key.txt
 
 * Saves time for quick, iterative commits.
 
@@ -30,6 +30,6 @@ This repository contains an automation script written in Expect that streamlines
 
 * A valid GitHub username and personal access token stored in a file:
 
-* Save your token in ~/Documents/key.txt (first line only).
+* Save your token in **~/Documents/key.txt** (first line only).
 
 * Ensure the file is secured with proper permissions:
