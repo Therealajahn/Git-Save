@@ -14,7 +14,7 @@ This repository contains an automation script written in Expect that streamlines
 
 * Automatically fills in GitHub credentials (using a stored key)
 
-# 🚀 Features  
+# Features  
 
 * Interactive prompts for commit messages and branch names.
 
@@ -24,7 +24,7 @@ This repository contains an automation script written in Expect that streamlines
 
 * Saves time for quick, iterative commits.
 
-#  📂 Requirements  
+# Requirements  
 
 * Expect must be installed on your system.
 
@@ -33,10 +33,37 @@ This repository contains an automation script written in Expect that streamlines
 * Save your token in **~/Documents/key.txt** (first line only).
 
 * Ensure the file is secured with proper permissions:
-⚡ Usage
+  
+# Usage
 1. Clone this repository and make the script executable:
+(it would be good to find your config.fish and put this in the same directory,
+it might be **~/.config/fish/config.fish**)
 ```
 git clone https://github.com/YourUsername/git-save.git
 cd git-save
 chmod +x git-save.exp
+```
+2. Run the script from your repo root.
+```
+./git-save.exp
+```
+3. Follow the interactive prompts:
+
+* Enter your commit message.
+
+* Enter the branch name.
+
+* The script will handle git add, git commit, and git push.
+# Polish
+1. Find your fish config file (it might be **~/.config/fish/config.fish**)
+2. Put your **git_save.exp** file in the same directory
+3. Add and alias for the **git_save.exp** file:
+```
+if status is-interactive
+  alias git-save='~/.config/fish/git_save.exp'
+end
+```
+4.Now you can execute the script with:
+```
+git-save
 ```
