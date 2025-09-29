@@ -56,8 +56,8 @@ chmod +x git-save.exp
 * The script will handle git add, git commit, and git push.
 # Polish
 1. Find your fish config file (it might be **~/.config/fish/config.fish**)
-2. Put your **git_save.exp** file in the same directory
-3. Add and alias for the **git_save.exp** file:
+2. Put your **git-save.exp** file in the same directory
+3. Add and alias for the **git-save.exp** file:
 ```
 if status is-interactive
   alias git-save='~/.config/fish/git_save.exp'
