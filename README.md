@@ -1,4 +1,4 @@
-==Git Save Script==
+#Git Save Script 
 
 This repository contains an automation script written in Expect that streamlines the Git workflow. Instead of typing multiple commands and re-entering your GitHub credentials manually, this script handles the full process in one run:
 
@@ -14,7 +14,7 @@ Pushes to the selected branch
 
 Automatically fills in GitHub credentials (using a stored key)
 
-==🚀 Features==
+#🚀 Features  
 
 Interactive prompts for commit messages and branch names.
 
@@ -24,7 +24,7 @@ Credential management: pulls your GitHub password/token from ~/Documents/key.txt
 
 Saves time for quick, iterative commits.
 
-==📂 Requirements==
+# 📂 Requirements  
 
 Expect must be installed on your system.
 
